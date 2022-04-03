@@ -12,6 +12,8 @@ export default function LoginForm({ eventHandler }) {
         console.log(data)
         axios.post('https://localhost:44317/api/login', data)
             .then((response) => {
+                localStorage.setItem("accessToken", JSON.stringify(response.data.accessToken));
+                console.log(localStorage.getItem("accessToken"))
                 router.push('/dashboard')
             }, (error) => {
                 console.log(error);
