@@ -1,0 +1,105 @@
+.container {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.loginContainerLeft {
+    width:100%;
+    flex:75%;
+    height: 100%;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainerRight {
+    flex:25%;
+    height: 100%;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.loginForm {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width:80%;
+}
+
+.input {
+    background-color: #212121;
+      border: 3px solid #555;
+        padding:0.5rem;
+        width: 100%;
+}
+
+.inputContainer {
+
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.inputDiv {
+    padding: 0.5rem
+}
+
+.splashContainer {
+          align-items: center;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    }
+
+    .loginButton {
+        background-color: #FF6700;   
+    }
+
+    .title a,
+.title span {
+  color: #FF6700;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+    color: #FAFAFAFA;
+
+}
+
+.registerButton {
+      line-height: 1.5;
+}
+
