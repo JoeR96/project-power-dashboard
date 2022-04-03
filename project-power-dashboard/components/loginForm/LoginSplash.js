@@ -13,6 +13,7 @@ export const LoginSplash = () => {
                 Where Thai Green is consumed
             </p>
             <Image
+                className={styles.image}
                 src={trollface}
             />
         </div>

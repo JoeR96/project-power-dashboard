@@ -1,17 +1,22 @@
 import React, { useEffect } from 'react'
 import { useForm, Controller, useFormState } from "react-hook-form";
 import styles from '../../styles/Login.module.css'
-import { Button, FormLabel, TextField } from '@mui/material';
+import { Button, FormLabel, Input } from '@mui/material';
 import axios from 'axios';
+import { fontWeight } from '@mui/system';
 
 export default function RegistrationForm({ eventHandler }) {
 
     //const onSubmit = data => console.log(data);
     function onSubmit(data) {
-        axios.post('http://projectpower.bigdave.fun/api/login', data)
-            .then(res => console.log(res))
-
+        axios.post('https://localhost:44317/UserAccounts', data)
+            .then((response) => {
+                eventHandler();
+            }, (error) => {
+                console.log(error);
+            });
     }
+
     const { handleSubmit, register, formState: { errors } } = useForm();
     console.log(errors)
     return (
@@ -22,16 +27,12 @@ export default function RegistrationForm({ eventHandler }) {
             <div className={styles.inputContainer}>
                 <div className={styles.inputDiv}>
                     <FormLabel
-                        style={{
-                            color: '#FF6700',
-                            alignContent: 'center'
-                        }} chr
+                        className={styles.FormLabel}
                     >
-
                         Username
                     </FormLabel>
-                    <input
-                        style={{ color: '' }}
+                    <Input
+                        className={styles.FormInput}
                         {...register("username", {
                             required: 'Enter a username',
                             minLength: {
@@ -43,20 +44,17 @@ export default function RegistrationForm({ eventHandler }) {
                                 message: 'Enter a username shorter than 15 characters'
                             }
                         })} />
-                    <p style={{ color: '#FAFAFA' }}>{errors.username?.message}</p>
+                    <p style={{ color: 'red' }}>{errors.username?.message}</p>
                 </div>
                 <div className={styles.inputDiv}>
                     <FormLabel
-                        style={{
-                            color: '#FF6700',
-                            alignContent: 'center'
-                        }} chr
+                        className={styles.FormLabel}
                     >
 
                         Email
                     </FormLabel>
-                    <input
-                        style={{ color: '' }}
+                    <Input
+                        className={styles.FormInput}
                         {...register("email", {
                             required: 'Enter an email',
                             pattern: {
@@ -64,20 +62,18 @@ export default function RegistrationForm({ eventHandler }) {
                                 message: "invalid email address"
                             }
                         })} />
-                    <p style={{ color: '#FAFAFA' }}>{errors.email?.message}</p>
+                    <p style={{ color: 'red' }}>{errors.email?.message}</p>
                 </div>
                 <div className={styles.inputDiv}>
                     <FormLabel
-                        style={{
-                            color: '#FF6700',
-                            alignContent: 'center'
-                        }} chr
+                        className={styles.FormLabel}
                     >
-
                         Password
                     </FormLabel>
-                    <input
-                        style={{ color: '' }}
+
+                    <Input
+                        className={styles.FormInput}
+                        type='password'
                         {...register("password", {
                             required: 'Enter a password',
                             minLength: {
@@ -89,7 +85,7 @@ export default function RegistrationForm({ eventHandler }) {
                                 message: 'Enter a password shorter than 15 characters'
                             }
                         })} />
-                    <p style={{ color: '#FAFAFA' }}>{errors.password?.message}</p>
+                    <p style={{ color: 'red' }}>{errors.password?.message}</p>
                 </div>
             </div>
             <Button

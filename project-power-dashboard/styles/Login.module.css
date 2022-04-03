@@ -43,7 +43,6 @@
 }
 
 .inputContainer {
-
     align-items: center;
     justify-content: flex-start;
     display: flex;
@@ -52,8 +51,14 @@
     padding-bottom: 3rem;
 }
 
+
 .inputDiv {
+  align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
     padding: 0.5rem
+
 }
 
 .splashContainer {
@@ -103,3 +108,19 @@
       line-height: 1.5;
 }
 
+.image {
+  padding: 25rem;
+}
+
+.FormLabel {
+  color: #FF6700;
+  align-content: center;
+  font-weight: 600;
+}
+
+.FormInput {
+  color: #FAFAFA;
+  align-content: center;
+  font-weight: 600;
+  background-color: #555;
+}
