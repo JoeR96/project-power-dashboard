@@ -1,0 +1,54 @@
+.dashboardHeader {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+    .title a,
+.title span {
+  color: #FF6700;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.dashboardContainer {
+    background-color: #212121;
+    height: 100vh
+}
+
+.cardContent {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF6700;
+}
+
+.headerContainer {
+    padding: 6rem 0 6rem 0;
+}
+
+.gridContainer{
+    padding:0 5rem 0 5rem
+}
+
+.description{
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 36px;
+}

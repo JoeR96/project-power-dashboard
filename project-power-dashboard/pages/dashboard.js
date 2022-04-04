@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from '../styles/Login.module.css'
-import LoginContainer from '../components/loginForm/LoginContainer'
-import { LoginSplash } from '../components/loginForm/LoginSplash'
-
+import { DashboardContainer } from '../components/dashboard/DashboardContainer'
+import styles from '../styles/Dashboard.module.css'
 const dashboard = () => {
     return (
-        <div className={styles.container}>
-            HELLO DASHBOARD!
+        <div
+            className={styles.dashboardContainer }
+        >
+            <DashboardContainer />
         </div>
     )
 }
