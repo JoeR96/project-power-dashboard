@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import { ColumnDragAndDropContainer } from '../components/workoutCreation/ColumnDragAndDropContainer';
 import styles from '../styles/Login.module.css'
 
 const workoutCreation = () => {
-    return (
-        <div >
-          <ColumnDragAndDropContainer></ColumnDragAndDropContainer>
+
+  const [winReady, setwinReady] = useState(false);
+  useEffect(() => {
+    setwinReady(true);
+  }, []);
+
+  return (
+    <div >
+          {winReady ? <ColumnDragAndDropContainer/> : null}
         </div>
     )
 }
